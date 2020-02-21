@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { connect } from 'react-redux';
 
-import {getData, addSmurfs} from '../actions';
+import {getData, postSmurfs} from '../actions';
 
 
 const SmurfForm = props => {
@@ -15,10 +15,10 @@ const SmurfForm = props => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        props.addSmurfs(smurf);
+        props.postSmurfs(smurf);
     }
 
-    const handleAddSmurfs = e => {
+    const handlePostSmurfs = e => {
         e.preventDefault();
         setSmurf({
             ...smurf,
@@ -38,7 +38,7 @@ const SmurfForm = props => {
                         id="name"
                         type="text"
                         name="name"
-                        onChange={e => handleAddSmurfs(e)}
+                        onChange={e => handlePostSmurfs(e)}
                     />
 
                     <label htmlFor="age">Age</label>
@@ -46,7 +46,7 @@ const SmurfForm = props => {
                         id="age"
                         type="text"
                         name="age"
-                        onChange={e => handleAddSmurfs(e)}
+                        onChange={e => handlePostSmurfs(e)}
                     />    
 
                     <label htmlFor="height">Height</label>
@@ -54,7 +54,7 @@ const SmurfForm = props => {
                         id="height"
                         type="text"
                         name="height"
-                        onChange={e => handleAddSmurfs(e)}
+                        onChange={e => handlePostSmurfs(e)}
                     />
                     <button> SUBMIT THAT SMURF</button>        
                 </form>
@@ -74,5 +74,5 @@ const mapStateToProps = state => {
 
 export default connect(
     mapStateToProps,
-    {getData, addSmurfs}
+    {getData, postSmurfs}
 )(SmurfForm);

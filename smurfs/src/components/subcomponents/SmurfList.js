@@ -1,6 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
+import { getData } from "../actions/index";
+
 const SmurfList = props => {
     console.log('smurflist props', props);
     return (

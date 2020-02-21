@@ -4,6 +4,7 @@ import { GET_DATA, UPDATE_SMURFS, SET_ERROR } from '../actions/index';
 const initialState = {
     smurfs : [],
     isFetchingData: false,
+    isPostingData: false,
     error: '',
 
 }
