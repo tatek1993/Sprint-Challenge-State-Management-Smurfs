@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { connect } from 'react-redux';
 
 import {getData, addSmurfs} from '../actions';
-import { smurfReducer } from '../reducers/SmurfReducer';
+
 
 const SmurfForm = props => {
 
