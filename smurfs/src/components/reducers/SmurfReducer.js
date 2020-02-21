@@ -4,7 +4,8 @@ import { GET_DATA, UPDATE_SMURFS, SET_ERROR } from '../actions/index';
 const initialState = {
     smurfs : [],
     isFetchingData: false,
-    error: ''
+    error: '',
+
 }
 
 export const smurfReducer = (state = initialState, action) => {
